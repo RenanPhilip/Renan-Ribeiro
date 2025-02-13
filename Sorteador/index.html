@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador Karime Linda</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sorteador de Itens da Lista</h1>
+        <div class="input-group">
+            <input type="text" id="item" placeholder="Digite um item para adicionar" onkeypress="if (event.key === 'Enter') adicionarItem()">
+            <button onclick="adicionarItem()">Adicionar</button>
+        </div>
+        
+        <div id="listaItems">
+            <h3>Items na lista:</h3>
+            <ul id="lista"></ul>
+            <div>Digite o mesmo nome para remover o item</div>
+        </div>
+        
+
+        <button onclick="sortear()">Sortear!</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="sorteador.js"></script>
+</body>
+</html> 
