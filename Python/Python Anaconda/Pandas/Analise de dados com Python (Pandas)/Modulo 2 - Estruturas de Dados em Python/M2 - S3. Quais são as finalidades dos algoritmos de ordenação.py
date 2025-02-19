@@ -1,0 +1,1 @@
+# #!Quais são as finalidades dos algoritmos de ordenação

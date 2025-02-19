@@ -1,3 +1,4 @@
+# #!PRIMEIROS PASSOS EM PYTHON
 x = 10
 nome = 'aluno'
 nota = 8.75

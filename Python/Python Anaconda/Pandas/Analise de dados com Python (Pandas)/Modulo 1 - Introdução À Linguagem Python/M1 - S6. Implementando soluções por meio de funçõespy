@@ -1,3 +1,5 @@
+# #! Implementando soluções por meio de funções
+
 def calcular_valor(valor_prod, qtde, moeda="real", desconto=None, acrescimo=None):
     v_bruto = valor_prod * qtde
     
