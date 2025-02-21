@@ -19,3 +19,4 @@ AJAX
 NodeJS
 
 Jquery, Angular etc.
+Ruby
