@@ -54,7 +54,7 @@ function sortear() {
             const indice = Math.floor(Math.random() * listaDeCoisas.length);
             resultado.textContent = `Item sorteado: ${listaDeCoisas[indice]}`;
         // }
-    }, 1000);
+    }, 500);
 }
 
 // Adiciona event listener para a tecla Enter
