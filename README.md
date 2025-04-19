@@ -2,9 +2,9 @@
 ## **Consultor Web Analytics | Especialista em Tagueamento e Automatizações**  
 
 ### **CONTATO**
-```Fone:```(11) 98107-3893  
-```Email:``` rphiliper@gmail.com  
-```LinkedIn:```[LinkedIn Renan Ribeiro](https://www.linkedin.com/in/renanph)  
+```Fone:      ``` (11) 98107-3893  
+```Email:     ``` rphiliper@gmail.com  
+```LinkedIn:  ``` [LinkedIn Renan Ribeiro](https://www.linkedin.com/in/renanph)  
 
 ---
 ## **RESUMO PROFISSIONAL**
