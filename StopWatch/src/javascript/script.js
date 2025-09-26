@@ -12,6 +12,7 @@ newLap = (txt) => {
     let p = document.createElement('p');
     p.innerHTML = `• Marca ${lapList.toString().padStart(2,'0')} : ${txt}`;
         marksList.appendChild(p);
+        marksList.scrollTop = marksList.scrollHeight
 }
 // newLap("12:12:12'12");
 
