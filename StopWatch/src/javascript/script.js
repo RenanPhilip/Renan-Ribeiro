@@ -62,6 +62,7 @@ resetButton.addEventListener('click', () => {
     time=0
     lapList=0
     timerEl.innerHTML = formatTime(time)
+    button.innerHTML = '<i class="fa-solid fa-play"></i>';
 
 });
 
