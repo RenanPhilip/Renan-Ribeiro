@@ -23,6 +23,8 @@ addNewTask.addEventListener('click',()=>{
     document.querySelector('#newTask').value = ""
 })
 
-removeTask.addEventListener('click',(e)=>{
-    e.target.parentElement.remove()
+listEl.addEventListener('click',(e)=>{
+    if (e.target && e.target.id.includes("removeTask")){
+     e.target.parentElement.remove()
+    }
 })
