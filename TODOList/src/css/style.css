@@ -48,6 +48,14 @@ h3 {
   font-weight: 500;
   margin-bottom: 18px;
 }
+#listName {
+  text-align: center;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #9aa3a835;
+  color: #0f1724;
+}
 
 /* Lista e gap (usamos margin nas tasks para animação) */
 .taskList {
