@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* Container principal */
+#all {
+    background-color: #fff;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+/* Lista de tarefas */
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cada tarefa */
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.task:hover {
+    background-color: #e0f7fa;
+    transform: translateY(-2px);
+}
+
+/* Checkbox */
+.task input[type="checkbox"] {
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    accent-color: #74ebd5;
+}
+
+/* Botão Delete */
+.task input[type="button"] {
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.task input[type="button"]:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+/* Input para nova tarefa */
+#taskInsert {
+    display: flex;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+#newTask {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#newTask:focus {
+    border-color: #74ebd5;
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+}
+
+/* Botão Add */
+#addNewTask {
+    background-color: #74ebd5;
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#addNewTask:hover {
+    background-color: #4ecdc4;
+    transform: scale(1.05);
+}
+
+/* Placeholder para futuras funcionalidades de drag & drop */
+.placeholder {
+    height: 50px;
+    margin: 8px 0;
+    border-radius: 8px;
+    background-color: rgba(116, 235, 213, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+/* Handle (seis pontinhos) para futuras funcionalidades de drag & drop */
+.drag-handle {
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.drag-handle span {
+    width: 4px;
+    height: 4px;
+    background-color: #999;
+    border-radius: 50%;
+    margin: 2px 0;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    #all {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
