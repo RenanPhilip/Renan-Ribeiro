@@ -10,38 +10,28 @@
 
 <body>
     <div id="all">
-    <h1>Lista de tarefas</h1>
-    <h3>Tarefas de teste</h3>
-    <div id="List" class="taskList">
-        
-        <div id="task0" class="task" draggable="true">
-            <input type="checkbox" id="checkbox">
-                Tarefa01
-        <input type="button" id="removeTask" value="Delete">
-        </div>
-        <div id="task0" class="task" draggable="true">
-            <input type="checkbox" id="checkbox">
-                Tarefa02
-        <input type="button" id="removeTask" value="Delete">
-        </div>
-        <div id="task0" class="task" draggable="true">
-            <input type="checkbox" id="checkbox">
-                Tarefa03
-        <input type="button" id="removeTask" value="Delete">
-        </div>
-        <div id="task0" class="task" draggable="true">
-            <input type="checkbox" id="checkbox">
-                Tarefa04
-        <input type="button" id="removeTask" value="Delete">
+        <h1>Lista de tarefas</h1>
+        <h3>Minha lista de tarefas</h3>
+        <div id="List" class="taskList">
+            
+            <div class="task" draggable="true">
+                <div class="drag-handle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <input type="checkbox" class="taskCheckbox">
+                <span class="taskText">Tarefa Exemplo</span>
+                <input type="button" class="removeTask" value="Delete">
+            </div>
+
         </div>
 
+        <div id="taskInsert">
+            <input type="text" id="newTask" placeholder="Uma nova tarefa">
+            <button type="submit" id="addNewTask">Add</button>
+        </div>
     </div>
-
-    <div id="taskInsert">
-        <input type="text" id="newTask" placeholder="Uma nova tarefa">
-        <button type="submit" id="addNewTask">Add</button>
-    </div>
-</div>
     <script src="src/javascript/script.js"></script>
 </body>
 
