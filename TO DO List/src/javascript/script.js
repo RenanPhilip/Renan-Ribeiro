@@ -28,7 +28,7 @@ addNewTask.addEventListener('click', handleAddTask)
 
 newTaskInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
-        e.preventDefault() // evita submit de formulário
+        e.preventDefault()
         handleAddTask()
     }
 })
