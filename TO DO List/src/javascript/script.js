@@ -1,4 +1,5 @@
 addNewTask = document.querySelector('#addNewTask')
+newTaskInput = document.querySelector('#newTask')
 listEl = document.querySelector('#List')
 removeTask = document.querySelector('#removeTask')
 
@@ -17,10 +18,19 @@ newTask = (taskData) => {
     taskNumer++
 }
 
-addNewTask.addEventListener('click',()=>{
-    task = document.querySelector('#newTask').value
+handleAddTask = () => {
+    task = document.querySelector('#newTask').value.trim()
     task != '' ? newTask(task) : console.log(task)
     document.querySelector('#newTask').value = ""
+}
+
+addNewTask.addEventListener('click', handleAddTask)
+
+newTaskInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault() // evita submit de formulário
+        handleAddTask()
+    }
 })
 
 listEl.addEventListener('click',(e)=>{
