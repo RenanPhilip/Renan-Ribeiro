@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- https://www.policlinicaneurocor.com.br/2022/10/aprenda-medir-sua-frequencia-cardiaca.html -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Batimento Cardiaco</title>
+        <link rel="stylesheet" src="src/css/style.css">
+    </head>
+    
+    <body>
+        Coloque sua idade e defina o tempo
+        <div>
+            <input type="number" name='idade' id="idade" placeholder="IDADE" min="0" max="120">
+            <div id="calcIdade"></div>
+        </div>
+        <div id="cronometro">
+        <div>
+            Selecione os segundos para verificar:
+            <div id="selectSeconds">
+                <input type="radio" name="timer" id="timer" alt="5" checked="true">5 Seg
+                <input type="radio" name="timer" id="timer" alt="10">10 Seg
+                <input type="radio" name="timer" id="timer" alt="15">15 Seg
+                <input type="radio" name="timer" id="timer" alt="30">30 Seg
+                <input type="radio" name="timer" id="timer" alt="60">60 Seg
+            </div>
+        </div>
+
+    </div>
+    
+    <button id="iniciar">Iniciar Timer</button>
+    <div id="timerSelected">00:00</div>
+    <div id="batimentos"></div>
+    
+    <h3>Para fazer com um relógio confira abaixo</h3>
+    <ul>
+        <li>
+            <a href="verificar.html">Como verificar sem esse app</a>
+        </li>
+        <li>
+            <a href="calculo.html">Como calcular os batimentos</a>
+        </li>
+    </ul>
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>
