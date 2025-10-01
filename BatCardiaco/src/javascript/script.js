@@ -3,15 +3,15 @@ let timeSelected = document.querySelectorAll('#timer')
 const iniciar = document.querySelector('#iniciar')
 const timerDisplay = document.getElementById('timerSelected');
 let countdownInterval;
-let calcIdade = document.querySelector('#calcIdade')
+// let calcIdade = document.querySelector('#calcIdade')
 let idadeInput = document.querySelector('#idade')
 
-idadeInput.addEventListener('blur', ()=>{
-    let batimento_medio = 220 - Number(idadeInput.value)
-    if(idadeInput != ""){
-        calcIdade.innerHTML = `Os batimentos deves estar no maiximo de: <br>${batimento_medio} <br> por minuto`
-    }
-})
+// idadeInput.addEventListener('blur', ()=>{
+//     let batimento_medio = 220 - Number(idadeInput.value)
+//     if(idadeInput != ""){
+//         calcIdade.innerHTML = `Os batimentos deves estar no maiximo de: <br>${batimento_medio} <br> por minuto`
+//     }
+// })
 
 function timeSec (){
     let timeSelected = document.querySelectorAll('#timer')
@@ -25,9 +25,12 @@ function timeSec (){
 }
 
 selectSeconds.addEventListener('click', ()=>{
+    document.querySelector("#batimentos").innerHTML=''
     timeSec()
     console.log(timeSec())
 })
+
+
 
 function bpsInput() {
     const batimentos = document.querySelector('#batimentos');
@@ -41,9 +44,7 @@ function bpsInput() {
         bps.placeholder = "Batimentos Contados";
 
         batimentos.appendChild(bps);
-
-        // Adiciona o listener para capturar o valor após o usuário digitar
-        bps.addEventListener('blur', () => {
+        function addValor(){
             const valorBatimentos = Number(bps.value);
             console.log("Batimentos digitados:", valorBatimentos);
 
@@ -51,12 +52,33 @@ function bpsInput() {
             // Exemplo: calcular BPM por minuto baseado no tempo selecionado
             const segundos = timeSec();
             if (segundos > 0 && valorBatimentos > 0) {
-                const bpmPorMinuto = valorBatimentos * (60 / segundos);
+                const bpmPorMinuto = (60 / segundos) * valorBatimentos ;
                 console.log(`BPM estimado: ${bpmPorMinuto.toFixed(1)}`);
+                
                 bpm = document.createElement('p')
                 bpm.innerHTML = `BPM estimado: ${bpmPorMinuto.toFixed(1)}`
+                
                 batimentos.appendChild(bpm)
 
+            }
+        }
+
+        // Adiciona o listener para capturar o valor após o usuário digitar
+        bps.addEventListener('blur', () => {
+            addValor()
+        });
+        //         // Chama handle se tiver mais de 2 dígitos
+        // bps.addEventListener('input', () => {
+        //     if (bps.value.length > 2) {
+        //         addValor()
+        //     }
+        // });
+
+        // Chama handle ao pressionar Enter
+        bps.addEventListener('keydown', (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault(); // evita submit de forms
+                addValor()
             }
         });
     }
@@ -100,10 +122,9 @@ function startPreparation(prepSeconds, mainSeconds) {
 
     countdownInterval = setInterval(() => {
         remaining--;
-        if (remaining < 0) {
+        if (remaining < 1) {
             clearInterval(countdownInterval);
-            // Inicia cronômetro principal após preparação
-            startCountdown(mainSeconds);
+            startCountdown(mainSeconds); // Cronometro principal após a preparação
             return;
         }
         timerDisplay.textContent = `Prepare: ${remaining}s`;
@@ -114,7 +135,7 @@ iniciar.addEventListener('click', () => {
     const segundos = timeSec();
     batimentos.innerHTML = '' 
     if (segundos > 0) {
-        startPreparation(0, segundos); // 5 segundos de preparação
+        startPreparation(5, segundos); // Preparação + Tempo selecioado no radio
     } else {
         alert("Selecione um tempo válido!");
     }
