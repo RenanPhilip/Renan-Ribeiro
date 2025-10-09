@@ -1,0 +1,274 @@
+/* ==============================
+   Reset e Box-sizing
+============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==============================
+   Estilo Geral
+============================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    overflow-x: hidden;
+}
+
+/* ==============================
+   Header
+============================== */
+#header {
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: #ffffff;
+    margin-bottom: 50px;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* ==============================
+   Grid de Projetos
+============================== */
+#projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==============================
+   Cards dos Projetos
+============================== */
+#projects-list > div {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Efeito hover nos cards */
+#projects-list > div:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de brilho no hover */
+#projects-list > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+#projects-list > div:hover::before {
+    left: 100%;
+}
+
+/* ==============================
+   Nome do Projeto (Topo)
+============================== */
+.project-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    order: -1;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+}
+
+/* ==============================
+   Ícones (Centro)
+============================== */
+#projects-list > div > div:first-of-type {
+    font-size: 5rem;
+    color: #667eea;
+    margin: auto 0;
+    transition: all 0.3s ease;
+    animation: shake 2s ease-in-out infinite;
+}
+
+/* Card em hover: ícone gira e depois flutua */
+#projects-list > div:hover > div:first-of-type {
+    animation: spinThenFloat 2s ease-out forwards;
+}
+
+/* Cards que NÃO estão em hover: tremem levemente */
+#projects-list > div:not(:hover) > div:first-of-type {
+    animation: shake 2s ease-in-out infinite;
+}
+
+/* Cores específicas para cada ícone */
+#projects-list > div:nth-child(1) > div:first-of-type { color: #e74c3c; } /* Tag - Vermelho */
+#projects-list > div:nth-child(2) > div:first-of-type { color: #3498db; } /* Python - Azul */
+#projects-list > div:nth-child(3) > div:first-of-type { color: #e67e22; } /* HTML - Laranja */
+#projects-list > div:nth-child(4) > div:first-of-type { color: #e91e63; } /* Coração - Rosa */
+#projects-list > div:nth-child(5) > div:first-of-type { color: #9b59b6; } /* Cronômetro - Roxo */
+#projects-list > div:nth-child(6) > div:first-of-type { color: #27ae60; } /* Lista - Verde */
+#projects-list > div:nth-child(7) > div:first-of-type { color: #f39c12; } /* Som - Amarelo */
+#projects-list > div:nth-child(8) > div:first-of-type { color: #16a085; } /* Random - Turquesa */
+
+/* ==============================
+   Links (Invisível mas clicável em todo card)
+============================== */
+#projects-list > div > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+/* ==============================
+   Animações
+============================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de tremor leve para ícones não-hover */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-2px) rotate(-1deg);
+    }
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateX(2px) rotate(1deg);
+    }
+}
+
+/* Animação de giro que desacelera + flutuação */
+@keyframes spinThenFloat {
+    0% {
+        transform: rotate(0deg) scale(1) translateY(0);
+    }
+    30% {
+        transform: rotate(360deg) scale(1.15) translateY(0);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.15) translateY(0);
+    }
+    75% {
+        transform: rotate(360deg) scale(1.15) translateY(-15px);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.15) translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+}
+
+/* Animação de entrada dos cards */
+#projects-list > div {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+#projects-list > div:nth-child(1) { animation-delay: 0.1s; }
+#projects-list > div:nth-child(2) { animation-delay: 0.2s; }
+#projects-list > div:nth-child(3) { animation-delay: 0.3s; }
+#projects-list > div:nth-child(4) { animation-delay: 0.4s; }
+#projects-list > div:nth-child(5) { animation-delay: 0.5s; }
+#projects-list > div:nth-child(6) { animation-delay: 0.6s; }
+#projects-list > div:nth-child(7) { animation-delay: 0.7s; }
+#projects-list > div:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   Responsividade
+============================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    #header {
+        margin-bottom: 30px;
+    }
+    
+    #projects-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    #projects-list > div {
+        min-height: 220px;
+        padding: 20px 15px;
+    }
+    
+    #projects-list > div > div:first-of-type {
+        font-size: 4rem;
+    }
+    
+    .project-name {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #projects-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    #projects-list > div {
+        min-height: 200px;
+    }
+    
+    #projects-list > div > div:first-of-type {
+        font-size: 3.5rem;
+    }
+}
+
+/* ==============================
+   Acessibilidade
+============================== */
+#projects-list > div:focus-within {
+    outline: 3px solid #ffffff;
+    outline-offset: 5px;
+}

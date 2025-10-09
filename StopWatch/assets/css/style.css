@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #5c0496, #ff00bb);
+}
+
+#stopwatch {
+    background-color: rgba(227, 24, 234, 0.686);
+    padding: 2rem;
+    border-radius: 20px;
+    border: solid 3px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+    height: 250px;
+    width: 250px;
+    border: solid 3px #9f6bff;
+    border-radius: 100%;
+    font-weight: 60;
+    font-size: 35px;
+    color: aqua;
+    
+    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 4rem;
+}
+
+#actions {
+    display: flex;
+    gap: .5rem;
+}
+
+#actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: #fb03ff;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#actions button:hover {
+    background-color: #821dd4;
+    transform: scale(1.05);
+    transition: background-color 0.5s ease;
+}
+
+#marks-list {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    max-height: 120px;
+    overflow-y: auto;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    font-style: italic;
+}
