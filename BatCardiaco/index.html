@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Batimento Cardiaco</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     
     <body>
@@ -18,8 +18,8 @@
         <div>
             Selecione os segundos para verificar:
             <div id="selectSeconds">
-                <input type="radio" name="timer" id="timer" alt="01" checked="true">01 Seg
-                <input type="radio" name="timer" id="timer" alt="05" >05 Seg
+                <!-- <input type="radio" name="timer" id="timer" alt="01" checked="true">01 Seg -->
+                <input type="radio" name="timer" id="timer" alt="05" checked="true">05 Seg
                 <input type="radio" name="timer" id="timer" alt="10">10 Seg
                 <input type="radio" name="timer" id="timer" alt="15">15 Seg
                 <input type="radio" name="timer" id="timer" alt="30">30 Seg
@@ -32,17 +32,19 @@
     <button id="iniciar">Iniciar Timer</button>
     <div id="timerSelected">00:00</div>
     <div id="batimentos"></div>
-    
-    <h3>Para fazer com um relógio confira abaixo</h3>
-    <ul>
-        <li>
-            <a href="verificar.html">Como verificar sem esse app</a>
-        </li>
-        <li>
-            <a href="calculo.html">Como calcular os batimentos</a>
-        </li>
-    </ul>
-    <script src="src/javascript/script.js"></script>
+    <div id="outasPaginas">
+        <h3>Para fazer com um relógio confira abaixo</h3>
+        <ul>
+            <li>
+                <a href="verificar.html">Como verificar sem esse app</a>
+            </li>
+            <li>
+                <a href="calculo.html">Como calcular os batimentos</a>
+            </li>
+        </ul>
+    </div>
+    <script src="./assets/javascript/script.js"></script>
+    <script src="../assets/javascript/call-navbar.js" type="module"></script>
 </body>
 
 </html>
