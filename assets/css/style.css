@@ -127,7 +127,7 @@ body {
 }
 
 /* Cores específicas para cada ícone */
-#projects-list > div:nth-child(1) > div:first-of-type { color: #ffc800; } /* Tag - Vermelho */
+#projects-list > div:nth-child(1) > div:first-of-type { color: #ffc800; } /* Estatistica - Amarelo */
 #projects-list > div:nth-child(2) > div:first-of-type { color: #e74c3c; } /* Tag - Vermelho */
 #projects-list > div:nth-child(3) > div:first-of-type { color: #3498db; } /* Python - Azul */
 #projects-list > div:nth-child(4) > div:first-of-type { color: #e67e22; } /* HTML - Laranja */
