@@ -127,14 +127,15 @@ body {
 }
 
 /* Cores específicas para cada ícone */
-#projects-list > div:nth-child(1) > div:first-of-type { color: #e74c3c; } /* Tag - Vermelho */
-#projects-list > div:nth-child(2) > div:first-of-type { color: #3498db; } /* Python - Azul */
-#projects-list > div:nth-child(3) > div:first-of-type { color: #e67e22; } /* HTML - Laranja */
-#projects-list > div:nth-child(4) > div:first-of-type { color: #e91e63; } /* Coração - Rosa */
-#projects-list > div:nth-child(5) > div:first-of-type { color: #9b59b6; } /* Cronômetro - Roxo */
-#projects-list > div:nth-child(6) > div:first-of-type { color: #27ae60; } /* Lista - Verde */
-#projects-list > div:nth-child(7) > div:first-of-type { color: #f39c12; } /* Som - Amarelo */
-#projects-list > div:nth-child(8) > div:first-of-type { color: #16a085; } /* Random - Turquesa */
+#projects-list > div:nth-child(1) > div:first-of-type { color: #ffc800; } /* Tag - Vermelho */
+#projects-list > div:nth-child(2) > div:first-of-type { color: #e74c3c; } /* Tag - Vermelho */
+#projects-list > div:nth-child(3) > div:first-of-type { color: #3498db; } /* Python - Azul */
+#projects-list > div:nth-child(4) > div:first-of-type { color: #e67e22; } /* HTML - Laranja */
+#projects-list > div:nth-child(5) > div:first-of-type { color: #e91e63; } /* Coração - Rosa */
+#projects-list > div:nth-child(6) > div:first-of-type { color: #9b59b6; } /* Cronômetro - Roxo */
+#projects-list > div:nth-child(7) > div:first-of-type { color: #27ae60; } /* Lista - Verde */
+#projects-list > div:nth-child(8) > div:first-of-type { color: #f39c12; } /* Som - Amarelo */
+#projects-list > div:nth-child(9) > div:first-of-type { color: #16a085; } /* Random - Turquesa */
 
 /* ==============================
    Links (Invisível mas clicável em todo card)
