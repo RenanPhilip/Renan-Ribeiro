@@ -6,13 +6,13 @@ console.log("CallNavbar host: ", host);
 const navbarPath = '/RenanPhilip/shared/navbar_components/navbar.js';
 // Constrói a URL completa com o protocolo hhtp
 const scriptUrl = `${document.location.protocol}//${host}${navbarPath}`;
-console.log("CallNavbar scriptUrl: ", scriptUrl);
+// console.log("CallNavbar scriptUrl: ", scriptUrl);
 
 // Cria dinamicamente a tag <script>
 const navbarURL = document.createElement('script');
 navbarURL.src = scriptUrl;
 navbarURL.type = 'module';
-console.log('navbarURL: ', navbarURL);
+// console.log('navbarURL: ', navbarURL);
 
 // Adiciona o script ao documento
 document.head.appendChild(navbarURL);
